@@ -1,4 +1,4 @@
-@MuddiestMoment.Api_HostAddress = http://localhost:5279
+@MuddiestMoment.Api_HostAddress = http://localhost:5007
 
 GET {{MuddiestMoment.Api_HostAddress}}/weatherforecast/
 Accept: application/json
