@@ -49,3 +49,13 @@ dotnet test // run my system tests.
 
 */
 
+/*
+var postgreSqlContainer = new PostgreSqlBuilder("postgres:17.5").Build();
+       await postgreSqlContainer.StartAsync();
+
+       var host = await AlbaHost.For<Program>(config =>
+       {
+           config.UseSetting("ConnectionStrings:db-mm", postgreSqlContainer.GetConnectionString());
+       }
+           );
+ */
