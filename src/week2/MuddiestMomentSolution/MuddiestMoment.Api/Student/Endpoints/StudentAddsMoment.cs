@@ -6,15 +6,17 @@ namespace MuddiestMoment.Api.Student.Endpoints;
 public static class StudentAddsMoment
 {
     public static async Task<Ok<StudentMomentResponseModel>> AddMoment(
-        StudentMomentCreateModel request, IDocumentSession session)
+        StudentMomentCreateModel request, IDocumentSession session, IProvideUserInformation userInfoProvider)
     {
+
+        var userId = userInfoProvider.GetUserId();
         var response = new StudentMomentResponseModel
         {
             Id = Guid.NewGuid(),
             Title = request.Title,
             Description = request.Description,
             CreatedOn = DateTimeOffset.UtcNow,
-            AddedBy = "fake user" // TODO: We need the ID of the actual user that made this request.
+            AddedBy = userId
         };
 
         // saving it to the database.

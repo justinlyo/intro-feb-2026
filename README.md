@@ -35,3 +35,20 @@ And
 ```sh
 git config --global user.email "Your@Email"
 ```
+
+## Getting the Instructor Code
+
+Pro Tips:
+
+- If you are in Visual Studio (not VS Code) just close it. Really. Bad things can happen.
+- Open an integrated terminal (`` Ctrl+` ``) And inssue the following command:
+- Make sure your terminal working directory is "~/class/intro"
+
+Run this command:
+
+```sh
+./pull-instructor-code.sh
+```
+
+## If None of the above works for you - JUST ASK THE INSTRUCTOR!!!
+

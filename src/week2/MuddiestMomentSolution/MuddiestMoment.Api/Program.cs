@@ -2,12 +2,16 @@
 
 using Marten;
 using MuddiestMoment.Api.Student;
+using MuddiestMoment.Api.Student.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 var connectionString = builder.Configuration.GetConnectionString("db-mm") ?? throw new Exception("No Connection String");
 
+// builder.Services.AddTransient
+// builder.Services.AddSingleton -- there will be exactly ONE of these services in memory, and every place that it gets injected will share that same instance. So it better be REALLY good and thread safe, or BAD things will happen.
+// builder.Services.AddScoped<IProvideUserInformation, MartinUserInformationPro3000>();
 
 builder.Services.AddMarten(config =>
 {

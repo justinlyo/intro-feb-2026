@@ -1,0 +1,13 @@
+GET https://localhost:9300/questions 
+Accept: application/json
+
+###
+
+POST https://localhost:9300/questions
+Content-Type: application/json
+
+{
+  "title": "How do I handle caching in HTTP?",
+  "question": "It seems everything around me is ruled by Cache-Control: no-cache. How do I make my HTTP requests efficient?",
+  "priority": 1
+}
